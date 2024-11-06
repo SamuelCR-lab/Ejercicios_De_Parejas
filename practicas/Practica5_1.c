@@ -2,11 +2,6 @@
 #include <stdlib.h>
 
 int main(){
-<<<<<<< HEAD
-int suma=0;
-printf("Hola");
-scanf ("%d",suma);
-=======
 	char dias[7][10] = {"Lunes", "Martes", "Míercoles", "Jueves", "Viernes", "Sábado", "Domingo"};
 	float temperatura [7];	
 	float suma = 0;
@@ -54,6 +49,5 @@ scanf ("%d",suma);
 		if (temperatura[i] < promedio)
 			 printf("%s: %f°C\n",dias[i],temperatura[i]);
 	}
->>>>>>> 4f8af4f8ddae11f414731f7e791cd0aa79303c00
 return 0;
 }
