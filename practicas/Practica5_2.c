@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  *
- *	Autores: Samuel Carías y Daniel 
+ *	Autores: Samuel Carías y Daniel Trapero 
  * 
  */
 
@@ -29,5 +29,12 @@ int main (){
 	}
 	promedio = suma/3;
 	printf("Nota promedio de la clase: %f\n",promedio);
+
+#define Limite_nota_aprobado 5.0
+struct notas aprobadas = 10;
+for (int i =0, ){
+	printf("La nota es:", &nota);
+	scanf (
+
 return EXIT_SUCCESS;
 }
