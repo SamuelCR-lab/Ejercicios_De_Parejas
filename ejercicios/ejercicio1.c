@@ -3,46 +3,16 @@
 #include <string.h>
 
 int main(){
-	char inventario[2][3][4][5][10];
-	
+	//Declaramos el Char inventario que es un array donde se contiene los datos de un almacen, siendo estos la ubicacion Continentes (America 0 y Europa 1), Cuantas Sedes (3)
+	//los dispositivos (4)(Televisores=0,  los modelos (5) y los lotes que contienen (10). Debido a esto lo igualamos a 0 para que cada uno de eellos se inicialize en 0 
+	char inventario[2][3][4][5][10] = {0};
 
-	printf("Introduce la temperatura promedio de cada dia de la semana\n");
-	for (int i = 0; i < 7; i++){
-		printf(" %s\n",dias[i]);
-		scanf(" %f",&temperatura[i]);
-		suma += temperatura[i];
+	//Con esto expresamos que en America al hacer la Categoria 0, en su priemra sede que es 0, hay de los dispositivos de los cuales el 0 son televisores  
+	inventario[0][0][0][0][0] = 155;
+	inventario[1][1][1][3][6] = 200;
+	inventario[1][0][2][2][5] = 333;
+	inventario[1][2][3][4][2] = 200;
+	inventario[0][1][4][1][9] = 169;
 
-	}
-	promedio = suma/7;
-	printf("Temperatura promedio de la semana: %f°C\n",promedio);
-	for(int i = 0; i < 7 ; i++){
-		if (temp_max < temperatura[i])
-			temp_max = temperatura[i];
-	}
-
-	for(int i = 0; i < 7; i++){
-		if (temp_min > temperatura[i])
-			temp_min = temperatura[i];
-	}
-
-	for(int i = 0; i < 7; i++){
-		if (temperatura [i] > promedio)
-			contador_max++;
-	}	
-
-	for(int i = 0; i < 7; i++){
-		if (temperatura [i] < promedio)
-			contador_min++;
-	}
-
-	printf("Temperatura máxima: %f°C el día \n",temp_max);
-	printf("Temperatura mínima: %f°C el día \n",temp_min);
-	printf("Número de días con temperaturas superiores al promedio: %d\n",contador_max);
-	printf("Días con temperaturas por debajo del promedio: %d\n",contador_min);
-
-	for(int i = 0; i < 7; i++){
-		if (temperatura[i] < promedio)
-			printf("%s: %f°C\n",dias[i],temperatura[i]);
-	}
-	return 0;
+return EXIT_SUCCESS;	
 }
