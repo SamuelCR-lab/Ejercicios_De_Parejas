@@ -1,15 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(){
-	char dias[7][10] = {"Lunes", "Martes", "Míercoles", "Jueves", "Viernes", "Sábado", "Domingo"};
-	float temperatura [7];	
-	float suma = 0;
-	float promedio = 0;
-	float temp_max = 0;
-	float temp_min = 200;
-	int contador_max = 0;
-	int contador_min = 0;
+	char inventario[2][3][4][5][10];
+	
 
 	printf("Introduce la temperatura promedio de cada dia de la semana\n");
 	for (int i = 0; i < 7; i++){

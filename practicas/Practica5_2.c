@@ -54,11 +54,33 @@ int main (){
 	printf("Nota promedio de la clase: %f\n",promedio);
 	printf("El número de alumnos aprobados es: %d\n", aprobados);
 	printf("El número de alumnos suspensos es: %d\n", suspensos);
+<<<<<<< HEAD
 	printf("Nota máxima: %f\n (el alumno en la posicion %d)",nota_max,posicion_max);
 	printf("Nota mínima: %f\n (el alumno en la posicion %d)",nota_min,posicion_min);
 
 			for(int i = 0; i < num_estudiantes; i++){
 				if (Estudiantes[i].notas_finales > promedio)
 				printf("Estudiante en la posicion %d: %lf\n",posicion,Estudiantes[i].notas_finales);}
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+return EXIT_SUCCESS;
+=======
+	printf("Nota máxima: %d\n el alumno \n",nota_max);
+	printf("Nota mínima: %d\n el alumno \n",nota_min);
+	printf("Notas por encima del promedio: %d\n",nota_max);
+}
+>>>>>>> c8fdafa8592a5ed1161d246050953c657596bc62
 	return EXIT_SUCCESS;
+>>>>>>> 8e77255269cfad614c74a3bcf65724a2b7615e55
 }
