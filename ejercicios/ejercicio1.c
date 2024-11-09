@@ -7,7 +7,7 @@ int main(){
 	//los dispositivos (4)(Televisores=0,  los modelos (5) y los lotes que contienen (10). Debido a esto lo igualamos a 0 para que cada uno de eellos se inicialize en 0 
 	int inventario[2][3][4][5][10] = {0};
 
-	//Con esto expresamos que en America al hacer la Categoria 0, en su priemra sede que es 0, hay de los dispositivos de los cuales el 0 son televisores  
+	//Aqui declaramos cuantos productos tenemos en un inventario en que continente, sede, tipo de producto, modelo y lote. 
 	inventario[0][0][0][0][0] = 500;
 	inventario[1][1][1][3][6] = 2250;
 	inventario[1][0][2][2][5] = 1363;
