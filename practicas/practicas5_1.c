@@ -45,8 +45,8 @@ int main(){
 
 	printf("Temperatura máxima: %f°C el día \n",temp_max);
 	printf("Temperatura mínima: %f°C el día \n",temp_min);
-	printf("Número de días con temperaturas superiores al promedio: %d\n",contador_max);
-	printf("Días con temperaturas por debajo del promedio: %d\n",contador_min);
+	printf("Número de días con temperaturas superiores al promedio: %d\n",contador_max,guardar_dia);
+	printf("Días con temperaturas por debajo del promedio: %d\n",contador_min,guardar_dia);
 
 	for(int i = 0; i < 7; i++){
 		if (temperatura[i] < promedio)
