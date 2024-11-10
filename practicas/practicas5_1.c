@@ -8,6 +8,7 @@ int main(){
 	float promedio = 0;
 	float temp_max = 0;
 	float temp_min = 200;
+	int guardar_dia;
 	int contador_max = 0;
 	int contador_min = 0;
 
@@ -23,11 +24,13 @@ int main(){
 	for(int i = 0; i < 7 ; i++){
 		if (temp_max < temperatura[i])
 			temp_max = temperatura[i];
+		        guardar_dia = i;
 	}
 
 	for(int i = 0; i < 7; i++){
 		if (temp_min > temperatura[i])
 			temp_min = temperatura[i];
+		        guardar_dia=i;
 	}
 
 	for(int i = 0; i < 7; i++){
