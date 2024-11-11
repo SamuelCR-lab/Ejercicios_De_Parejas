@@ -23,7 +23,7 @@ int main (){
 	float nota_min=10;	
 	int posicion_min=0;
 	int posicion_max=0;
-	int posicion=0;
+	int posicion = 0;
 	printf("Introduce el numero de estudiantes: ");
 	scanf("%d",&num_estudiantes);
 	struct notas Estudiantes[num_estudiantes];
@@ -40,28 +40,27 @@ int main (){
 			suma += Estudiantes[i].notas_finales;
 			}		
 			promedio = suma/num_estudiantes;
-
+		printf("Nota promedio de la clase: %f\n",promedio);
+		printf("El número de alumnos aprobados es: %d\n", aprobados);
+		printf("El número de alumnos suspensos es: %d\n", suspensos);
 			for(int i = 0; i < num_estudiantes; i++){
-				if (nota_min > Estudiantes[i].notas_finales)
-					nota_min = Estudiantes[i].notas_finales;
-					posicion_min = i;
-				}
-
-			for(int i = 0; i < num_estudiantes; i++){
-				if (nota_max < Estudiantes[i].notas_finales)
+				if (nota_max < Estudiantes[i].notas_finales){
 					nota_max = Estudiantes[i].notas_finales;
-					posicion_max = i;
-				}	
-
-	printf("Nota promedio de la clase: %f\n",promedio);
-	printf("El número de alumnos aprobados es: %d\n", aprobados);
-	printf("El número de alumnos suspensos es: %d\n", suspensos);
-	printf("Nota máxima: %f (el alumno en la posicion %d)\n",nota_max,posicion_max);
-	printf("Nota mínima: %f (el alumno en la posicion %d)\n",nota_min,posicion_min);
-	printf("Notas por encima del promedio:\n");
+					posicion_max = ++i;
+				}
+			}	
+		printf("Nota máxima: %f (el alumno en la posicion %d)\n",nota_max,posicion_max);
+			for(int i = 0; i < num_estudiantes; i++){
+				if (nota_min > Estudiantes[i].notas_finales){
+					nota_min = Estudiantes[i].notas_finales;
+					posicion_min = ++i;
+				}
+			}
+		printf("Nota mínima: %f (el alumno en la posicion %d)\n",nota_min,posicion_min);
+		printf("Notas por encima del promedio:\n");
 			for(int i = 0; i < num_estudiantes; i++){
 				if (Estudiantes[i].notas_finales > promedio)
-				printf("Estudiante en la posicion %d: %lf\n",posicion,Estudiantes[i].notas_finales);
+				printf("Estudiante en la posicion %d: %lf\n",posicion = i + 1,Estudiantes[i].notas_finales);
 			}
 				
 return EXIT_SUCCESS;
