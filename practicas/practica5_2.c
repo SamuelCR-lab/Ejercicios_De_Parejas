@@ -6,7 +6,7 @@
  *	Autores: Samuel Carías y Daniel Trapero
  * 
  */
-#define APROBADO 5.0
+#define APROBADO 5.0 //* Este define obliga al programa a que la nota mínima para los aprobados es un 5.0//
 struct notas{
 	char nombre [40];
 	double notas_finales;
