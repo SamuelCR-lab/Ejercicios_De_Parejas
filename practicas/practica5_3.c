@@ -19,7 +19,7 @@ int main (){
 	int con_inventario = 0;
 	char reabastecer[3];
 	char comparacion[3] = "si";
-	char nombre1[20];	
+	char nombre[20];	
 	int aniadir = 0;
 	char buscar[20];
 	int resultado;
@@ -42,46 +42,48 @@ int main (){
 		printf("¿Desea reabastecer algún producto? (si/no): ");
 		scanf("%s",reabastecer);
 		resultado = strcmp(reabastecer, comparacion);
-	if (resultado == 0){
+		if (resultado == 0){
 			printf("Ingrese el nombre del producto: ");
-			scanf("%s",nombre1);
-			resultado1 = strcmp(nombre1, tienda[i].nombre);
-			if (resultado1 == 0){
+			scanf("%s",nombre);
 			printf("Cantidad a añadir: ");
 			scanf("%d",&aniadir);
-			tienda[i].cantidad = tienda[i].cantidad + aniadir;
-			}
-		
+			tienda[i].cantidad += aniadir;		
+		}else{
 		for (int i = 0; i < productos; i++){
 			if (tienda[i].cantidad <= BAJO_STOCK){
-			printf("%s - %d\n",tienda[i].nombre,tienda[i].cantidad);
+				printf("%s - %d\n",tienda[i].nombre,tienda[i].cantidad);
 				}
-			}	
-		for (int i = 0; i < 1; i++){
+			}		
+		for (int i = 0; i < productos; i++){
 			printf("Ingrese el nombre del producto a buscar: ");
 			scanf("%s",buscar);
 			resultado1 = strcmp(buscar, tienda[i].nombre);
-			if (resultado2 == 0){
-			printf("Cantidad en stock: %d unidades\n",tienda[i].cantidad);
-				}
-			}		
-	}else{
-		for (int i = 0; i < producto; i++){
-			if (tienda[i].cantidad <= BAJO_STOCK){
-			printf("%s - %d\n",tienda[i].nombre,tienda[i].cantidad);
-				}
-			}		
-		for (int i = 0; i < 1; i++){
-			printf("Ingrese el nombre del producto a buscar: ");
-			scanf("%s",buscar);
-			resultado2 = strcmp(buscar, tienda[i].nombre);
-			if (resultado2 == 0){
-			printf("Cantidad en stock: %d unidades\n",tienda[i].cantidad);
-				}
+			if (resultado1 == 0){
+				printf("Cantidad en stock: %d unidades\n",tienda[i].cantidad);
+			}else{
+				printf("Este producto no existe");
+				i = productos;
 			}
 		return 0;	
 		}
 	}
+		for (int i = 0; i < productos; i++){
+			if (tienda[i].cantidad <= BAJO_STOCK){
+				printf("%s - %d\n",tienda[i].nombre,tienda[i].cantidad);
+				}
+			}
+		for (int i = 0; i < productos; i++){
+			printf("Ingrese el nombre del producto a buscar: ");
+			scanf("%s",buscar);
+			resultado1 = strcmp(buscar, tienda[i].nombre);
+			if (resultado1 == 0){
+				printf("Cantidad en stock: %d unidades\n",tienda[i].cantidad);
+			}else{
+				printf("Este producto no existe");
+				i = productos;
+			}		
+		}
+	
 return EXIT_SUCCESS;
 }
 
