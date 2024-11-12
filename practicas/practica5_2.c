@@ -26,7 +26,7 @@ int main (){
 	int posicion = 0;
 	printf("Introduce el numero de estudiantes: ");
 	scanf("%d",&num_estudiantes);
-	struct notas Estudiantes[num_estudiantes];
+	struct notas Estudiantes[num_estudiantes];    
 	for (int i = 0; i < num_estudiantes; i++){
 		printf("Nombre del estudiante: ");
 		scanf("%s",Estudiantes[i].nombre);
@@ -37,15 +37,15 @@ int main (){
 			}else{
 				suspensos = suspensos + 1;
 			}
-			suma += Estudiantes[i].notas_finales;
+			suma += Estudiantes[i].notas_finales;  
 			}		
 			promedio = suma/num_estudiantes;
 		printf("Nota promedio de la clase: %f\n",promedio);
 		printf("El número de alumnos aprobados es: %d\n", aprobados);
 		printf("El número de alumnos suspensos es: %d\n", suspensos);
-			for(int i = 0; i < num_estudiantes; i++){
-				if (nota_max < Estudiantes[i].notas_finales){
-					nota_max = Estudiantes[i].notas_finales;
+			for(int i = 0; i < num_estudiantes; i++){               // Estos bucles for contienen un condicional dentro para conocer la
+				if (nota_max < Estudiantes[i].notas_finales){   // nota máxima y mínima y compararla con las notas finales de 
+					nota_max = Estudiantes[i].notas_finales; //los estudiantes.
 					posicion_max = ++i;
 				}
 			}	
