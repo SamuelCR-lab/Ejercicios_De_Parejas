@@ -22,7 +22,7 @@ int main (){
 	char nombre [20];	
 	int aniadir = 0;
 	char buscar [20];
-	int resultado;
+	int resultado = 0;
 	printf("Ingrese el número total de productos que desea gestionar (máximo 10): ");
 	scanf("%d",&productos);
 	struct inventario tienda[productos];
@@ -40,7 +40,7 @@ int main (){
 		printf("¿Desea reabastecer algún producto? (si/no): ");
 		scanf("%s",reabastecer);
 		resultado = strcmp(reabastecer, comparacion);
-		if (resultado = '0'){
+		if (resultado == '0'){
 		printf("Ingrese el nombre del producto: ");
 		scanf("%s",nombre);
 			if (strcmp(nombre, tienda[i].nombre)){
